@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- JS -->
+        <h:outputScript library="primefaces" name="jquery/jquery.js"
+                        target="head" />
+        <h:outputScript library="primefaces" name="jquery/jquery-plugins.js"
+                        target="head" />
+
+
+        <h:outputStylesheet library="css" name="charmex.css" />
+        <h:outputStylesheet library="css" name="commons.css" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/resources/img/logo_oficial_Nzn_icon.ico"/>
+        <title>Charmex Producciones</title>
+    </h:head>
+
+    <h:body>
+
+        <h:form id="masterForm">
+            <h:panelGroup id="contenedor" layout="block" styleClass="contenedorPrincipal" >
+
+                <p:graphicImage value="resources/img/logo.png" />
+
+                <!--Menu -->
+                <p:menubar styleClass="centeredMenuBar">
+                    <p:menuitem value="Inicio" outcome="index.xhtml" />
+                    <p:menuitem value="Nosotros" outcome="nosotros.xhtml" />
+                    <p:menuitem value="Trabajos" outcome="trabajos.xhtml" />
+                    <p:menuitem value="Videos" outcome="videos.xhtml" />
+                    <p:menuitem value="Discos" outcome="discos.xhtml" />
+                    <p:menuitem value="Galería" outcome="galeria.xhtml" />
+                    <p:menuitem value="Contacto" outcome="contacto.xhtml" />
+                </p:menubar>
+
+                <!-- Acá es donde se define que será la parte donde cambiará constantemente la aplicación -->
+                <div id="content" >
+
+                    <ui:insert name="contenedor">??? View content ???</ui:insert>
+
+                </div>
+                <!-- Fin contenido central -->
+
+                <!-- Barra de carga -->
+                <p:ajaxStatus onstart="PF('statusDialog').show()"
+                              onsuccess="PF('statusDialog').hide()" />
+
+                <p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+                          closable="false" resizable="false" showHeader="false">
+                    <p:graphicImage library="img" name="ajax-loader.gif" />
+                </p:dialog>
+                <!-- Barra de carga -->
+
+
+                <!-- Footer -->
+                <h:panelGroup id="footer" layout="block" styleClass="margin_bottom">
+                    
+                    <p:graphicImage value="resources/img/separador_footer.png" />
+                    <div class="ui-g">
+                        <div class="ui-g-12 ui-md-9 ui-lg-9">
+                            © Síguenos en nuestras redes sociales
+                        </div>
+                         <div class="ui-g-12 ui-md-3 ui-lg-3">
+                            <h:panelGroup styleClass="float_der" >
+                                <p:button icon="fa fa-fw fa-facebook-official" title="Icon Only" onclick="window.open('#{navbean.REDIR_FACE}'); return false;" />
+                                <p:button icon="fa fa-fw fa-soundcloud" title="Icon Only" onclick="window.open('#{navbean.REDIR_SOUNDCLOUD}'); return false;" />
+                                <p:button icon="fa fa-fw fa-instagram" title="Icon Only" onclick="window.open('#{navbean.REDIR_INSTA}'); return false;" />
+                                <p:button icon="fa fa-fw fa-youtube-play" title="Icon Only" onclick="window.open('#{navbean.REDIR_YOUTUBE}'); return false;" />
+                            </h:panelGroup>
+                        </div>
+                    </div>
+                </h:panelGroup>
+            </h:panelGroup>
+            <!-- Fin Footer -->
+        </h:form>
+
+    </h:body>
+
+</html>
