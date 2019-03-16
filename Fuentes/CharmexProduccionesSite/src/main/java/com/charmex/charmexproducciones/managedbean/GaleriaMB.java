@@ -26,8 +26,8 @@ public class GaleriaMB implements Serializable {
     public void init() {
 
         imagenes = new ArrayList<>();
-        for (int x = 1; x <= 62; x++) {
-            imagenes.add("galeria" + x + ".jpg");
+        for (int x = 0; x <= 54; x++) {
+            imagenes.add("tulepato-" + x + ".jpg");
         }
 
         System.out.println("Imagenes correctamente cargadas");

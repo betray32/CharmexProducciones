@@ -22,11 +22,10 @@
 				</h:panelGroup>
 
 
-				<p:imageSwitch widgetVar="switcher" id="manuelSwitcher" slideshowAuto="true" style="border: 5px solid red" >
+				<p:imageSwitch widgetVar="switcher" id="manuelSwitcher" slideshowAuto="true"  >
 					
-					<ui:repeat value="#{indexmbean.urls_carousel_galery}" var="c" id="manuelSwitcherImages">
-						<p:graphicImage value="resources/img/#{c}"/>
-						
+					<ui:repeat value="#{gallery.imagenes}" var="c" id="manuelSwitcherImages">
+						<p:graphicImage value="resources/img/galeria/#{c}" styleClass="content" />
 					</ui:repeat>
 				</p:imageSwitch>
 				<p:commandButton type="button" onclick="PF('switcher').previous();" icon="pi pi-caret-left" id="prev" style="margin-bottom: 5px"/>
