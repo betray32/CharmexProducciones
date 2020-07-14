@@ -23,13 +23,13 @@ public class EmailSender {
         System.out.println("Nombre Usuario: " + nombre);
         System.out.println("Email Solicitante: " + email_cliente);
         System.out.println("Mensaje: " + mensaje);
-        
+
         String telefono = "No especificado";
-        
-        if ( !"".equals(fono) ) {
+
+        if (!"".equals(fono)) {
             telefono = fono;
-        } 
-        
+        }
+
         final String username = ConstantesEmail.EMAIL_USUARIO;
         final String password = ConstantesEmail.EMAIL_CLAVE;
 
@@ -50,8 +50,8 @@ public class EmailSender {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(email_cliente));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(ConstantesEmail.EMAIL_USUARIO));
+            message.setFrom(new InternetAddress(ConstantesEmail.EMAIL_USUARIO));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email_cliente));
             message.setSubject("Contacto cliente nombre: " + nombre);
             message.setText(mensaje + "\n\n Datos cliente: Email: " + email_cliente + " - Telefono: " + telefono);
 
@@ -63,7 +63,7 @@ public class EmailSender {
         } catch (MessagingException e) {
             System.err.println("Ha ocurrido un error al enviar el email solicitado por el usuario, Error: " + e.getMessage());
         }
-        
+
         return false;
 
     }

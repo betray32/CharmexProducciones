@@ -17,10 +17,10 @@ import javax.faces.bean.ViewScoped;
 public class GaleriaMB implements Serializable {
 
     /**
-	 * UID
-	 */
-	private static final long serialVersionUID = -827502970495426257L;
-	private List<String> imagenes;
+     * UID
+     */
+    private static final long serialVersionUID = -827502970495426257L;
+    private List<String> imagenes;
 
     @PostConstruct
     public void init() {

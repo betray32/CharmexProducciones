@@ -27,12 +27,17 @@ body {
 }
 
 .centeredMenuBar.ui-menubar {
-    text-align: center;
+     text-align: center;
 }
 
 .centeredMenuBar .ui-menu-list {
     display: inline-block;
 }
+
+.centeredMenuBar .ui-menu-list .ui-menuitem {
+    margin-right: 50px;
+}
+
 
 /* BORDES TITULOS */
 .c3bg {

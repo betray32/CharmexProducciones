@@ -21,14 +21,11 @@ import javax.faces.bean.ViewScoped;
 public class IndexManagedBean implements Serializable {
 
     /**
-	 * UID
-	 */
-	private static final long serialVersionUID = 901537615013700904L;
-
-	private List<String> urls_carousel;
-    
+     * UID
+     */
+    private static final long serialVersionUID = 901537615013700904L;
+    private List<String> urls_carousel;
     private List<String> urls_carousel_galery;
-
     private String introduccion;
 
     @PostConstruct
@@ -41,16 +38,16 @@ public class IndexManagedBean implements Serializable {
      */
     private void initObjects() {
         urls_carousel = new ArrayList<>();
-        for ( int x = 1; x < 4; x++ ) {
-            urls_carousel.add("banner"+x+".png");
+        for (int x = 1; x < 4; x++) {
+            urls_carousel.add("banner" + x + ".png");
         }
-        
+
         urls_carousel_galery = new ArrayList<>();
-        for ( int x = 15; x > 0; x-- ) {
-            urls_carousel_galery.add("galeria_index"+x+".jpg");
+        for (int x = 15; x > 0; x--) {
+            urls_carousel_galery.add("galeria_index" + x + ".jpg");
         }
-        
-        introduccion = "En Charmex Producciones podrÃ¡s lograr que todas tus ideas se concreten y conviertan en mÃºsica, no importa si eres un mÃºsico aficionado que emprende camino o un artista/banda con amplia trayectoria; nosotros realizamos cada trabajo de forma profesional con el principal objetivo de lograr que cada proyecto musical sea de gran calidad.";
+
+        introduccion = "En Charmex Producciones podrás lograr que todas tus ideas se concreten y conviertan en música, no importa si eres un músico aficionado que emprende camino o un artista/banda con amplia trayectoria; nosotros realizamos cada trabajo de forma profesional con el principal objetivo de lograr que cada proyecto musical sea de gran calidad.";
     }
 
     public List<String> getUrls_carousel() {

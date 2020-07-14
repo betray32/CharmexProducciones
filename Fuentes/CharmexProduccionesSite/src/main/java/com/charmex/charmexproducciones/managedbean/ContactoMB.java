@@ -23,11 +23,11 @@ import javax.faces.context.FacesContext;
 public class ContactoMB implements Serializable {
 
     /**
-	 * UID
-	 */
-	private static final long serialVersionUID = -3344587875056076144L;
+     * UID
+     */
+    private static final long serialVersionUID = -3344587875056076144L;
 
-	/**
+    /**
      * Inyeccion
      */
     @ManagedProperty("#{navbean}")
@@ -57,7 +57,7 @@ public class ContactoMB implements Serializable {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Email enviado correctamente, nos contactaremos con usted a la brevedad", null));
             limpiarCamposFormulario();
         } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "¡UPS! Ha ocurrido un error al enviar el email de contacto, porfavor intentalo nuevamente más tarde", null));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Ha ocurrido un error al enviar el email de contacto, porfavor reintente en unos instantes", null));
             limpiarCamposFormulario();
         }
     }
