@@ -50,8 +50,8 @@ public class EmailSender {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(ConstantesEmail.EMAIL_USUARIO));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email_cliente));
+            message.setFrom(new InternetAddress(email_cliente));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(ConstantesEmail.EMAIL_USUARIO));
             message.setSubject("Contacto cliente nombre: " + nombre);
             message.setText(mensaje + "\n\n Datos cliente: Email: " + email_cliente + " - Telefono: " + telefono);
 

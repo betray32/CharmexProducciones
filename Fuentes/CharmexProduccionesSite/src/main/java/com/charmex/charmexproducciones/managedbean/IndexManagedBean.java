@@ -47,7 +47,7 @@ public class IndexManagedBean implements Serializable {
             urls_carousel_galery.add("galeria_index" + x + ".jpg");
         }
 
-        introduccion = "En Charmex Producciones podrás lograr que todas tus ideas se concreten y conviertan en música, no importa si eres un músico aficionado que emprende camino o un artista/banda con amplia trayectoria; nosotros realizamos cada trabajo de forma profesional con el principal objetivo de lograr que cada proyecto musical sea de gran calidad.";
+        introduccion = "En Charmex Producciones podrÃ¡s lograr que todas tus ideas se concreten y conviertan en mÃºsica, no importa si eres un mÃºsico aficionado que emprende camino o un artista/banda con amplia trayectoria; nosotros realizamos cada trabajo de forma profesional con el principal objetivo de lograr que cada proyecto musical sea de gran calidad.";
     }
 
     public List<String> getUrls_carousel() {
