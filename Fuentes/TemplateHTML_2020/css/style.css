@@ -113,7 +113,7 @@ hr{
 
 .navbar-brand>img {
 	width: 100%;
-	max-width: 130px;
+	max-width: 13em;
 }
 
 /* secondary menu */
@@ -1142,7 +1142,6 @@ footer .copy-right {
 	}
 	
 	.navbar-default .navbar-brand {padding-top: 5px;}
-	.navbar-default .navbar-brand>img {max-width: 140px;}
 	
 	.navbar, .navbar.comeup { margin-top: 0; padding: 10px 0; background: rgba(0,0,0,0.9);}
 	header .navbar-default .navbar-nav>li>a, header .navbar-default .navbar-nav>li.active>a,
